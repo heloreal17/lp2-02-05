@@ -47,6 +47,11 @@ p {
     margin-bottom: 3rem;
 }
 
+textarea {
+    height: 150px;
+    resize: none;
+}
+
 .main-bg {
     background-image: url('../images/main-bg.svg');
     background-size: cover;

@@ -10,20 +10,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-danger" role="alert">
             <a href="/gallery"  class="alert-link">Voltar</a>
         </div>
 
     <h1 class="display-4">Gallery - Gerenciamento de Conteúdo</h1>
-    <h3 class="display-6">Gallery - Alterar</h3>
+    <h3 class="display-6">Gallery - Excluir</h3>
     <label for="" class="form-control">Preview</label>
     <img src="uploads/<%=dados.arquivo%>" width="300" alt=""><br>
-    <form action="" method="post" enctype="multipart/form-data"><br>
+    <form action="" method="post"><br>
         <input type="hidden" name="anterior" value="<%=dados.arquivo%>">
-        <label for="imagem" class="form-label">Imagem:</label>
-        <input type="file" name="imagem" id="" required class="form-control btn-file"><br>
-        <button onclick="window.location.href='/gallery'"class="btn btn-info btn-sm">Cancelar</button> 
-        <input type="submit" value="Alterar" class="btn btn-warning btn-sm"><br>
+        <button type="button" onclick="window.location.href='/gallery'"class="btn btn-info btn-sm">Cancelar</button> 
+        <input type="submit" value="Excluir" class="btn btn-danger btn-sm"><br>
     </form>
 </div>
 </body>

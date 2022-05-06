@@ -13,33 +13,32 @@
         <div class="alert alert-success" role="alert">
             <a href="/admin"  class="alert-link">Voltar</a>
         </div>
-    <h1  class="display-4">My Grid - Gerenciamento de Conteúdo</h1>
+    <h1 class="display-4">My Grid - Gerenciamento de Conteúdo</h1>
     <h3 class="display-6">My Grid - Adicionar</h3>
-    <form action="" method="post">
+    <form action="" method="post" >
         <label for="titulo" class="form-label">Título:</label>
         <input type="text" name="titulo" id="" required class="form-control"><br>
         <label for="texto"class="form-label">Texto:</label>
-        <textarea name="texto" id="" cols="30" rows="10"required class="form-control" style="height: 200px;resize: none;" ></textarea><br>
+        <textarea style="height: 150px;resize:none;" name="texto" id="" cols="30" rows="10"required class="form-control"></textarea><br>
         <input type="submit" value="Gravar" class="btn btn-success">
     </form>
     <h3 class="display-6">My Grid - Listar</h3>
-    <!-- Alterar a tabela do bootstrap, código classe -->
     <table class="table table-striped table-hover">
         <tr>
             <th>Título</th>
             <th>Texto</th>
             <th colspan="2">Ações</th>
         </tr>
-        <!-- inserir um loop para exibição da JSON mygrid -->
+        <!-- inserir um loop para exibição da JSON mygrid-->
         <% for (var n=0; n<dados.length; n++){%>
         <tr>
             <td><%=dados[n].titulo%></td>
             <td><%=dados[n].texto%></td>
-            <td><a href="/visualizar_mygrid?id=<%=dados[n]._id%>&acao=update" class="btn btn-warning btn-sm">Alterar</a></td>
-            <td><a href="/visualizar_mygrid?id=<%=dados[n]._id%>&acao=delete" class="btn btn-danger btn-sm">Excluir</a></td>
+            <td><a href ="/visualizar_mygrid?id=<%=dados[n]._id%>&acao=update" class="btn btn-warning btn-sm">Alterar</a></td>
+            <td><a href ="/visualizar_mygrid?id=<%=dados[n]._id%>&acao=delete" class="btn btn-danger btn-sm">Excluir</a></td>
         </tr>
         <%}%>
-        <!-- fim do loop -->
+        <!-- fim do loop-->
     </table>
 </div>
 </body>
